@@ -40,7 +40,7 @@
 </template>
 
 <script lang="ts">
-import Icon from "@/Icon.vue";
+import Icon from "./Icon.vue";
 import { computed, defineComponent, ref, PropType, toRef } from "vue";
 import { PropColours, HandleRateProps } from "@/types/props";
 

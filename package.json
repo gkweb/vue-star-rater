@@ -17,7 +17,8 @@
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "test": "jest"
   },
   "dependencies": {
     "postcss": "^8.2.1"
@@ -29,15 +30,20 @@
     "@rollup/plugin-alias": "^2.2.0",
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-replace": "^2.3.2",
+    "@types/jest": "^26.0.19",
+    "@types/mocha": "^8.2.0",
     "@vue/cli-plugin-babel": "^4.5.9",
     "@vue/cli-plugin-typescript": "^4.5.9",
     "@vue/cli-service": "^4.5.9",
     "@vue/compiler-sfc": "^3.0.4",
     "@vue/component-compiler": "^4.2.3",
+    "@vue/test-utils": "^2.0.0-beta.13",
+    "babel-jest": "^26.6.3",
     "cross-env": "^7.0.2",
     "eslint": "^7.16.0",
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-vue": "^7.3.0",
+    "jest": "^26.6.3",
     "minimist": "^1.2.5",
     "prettier": "^2.2.1",
     "rollup": "^2.7.3",
@@ -45,8 +51,10 @@
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-terser": "^5.3.0",
     "rollup-plugin-vue": "^6.0.0-beta.10",
+    "ts-jest": "^26.4.4",
     "typescript": "^3.8.3",
-    "vue": "^3.0.4"
+    "vue": "^3.0.4",
+    "vue-jest": "^5.0.0-alpha.7"
   },
   "peerDependencies": {
     "vue": "^3.0.0"

@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import StarRate from "@/components/StarRate.vue";
+import StarRate from "./../../src/star-rate.vue";
 
 describe("StarRate.vue", () => {
   it("renders props.modelValue when passed", () => {
