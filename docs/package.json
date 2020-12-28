@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "vue": "^3.0.4",
-    "vue-star-rate": "file:../",
+    "vue-star-rater": "^0.0.1",
     "vue3-highlightjs": "^1.0.5"
   },
   "devDependencies": {

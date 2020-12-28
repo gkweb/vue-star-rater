@@ -121,7 +121,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, reactive } from "vue";
-import StarRate from "vue-star-rate";
+import StarRate from "vue-star-rater";
 import ExampleContainer from "./components/ExampleContainer.vue";
 import CodeExample from "./components/CodeExample.vue";
 import { normalExample, customColoursExample } from "./example-data/";
