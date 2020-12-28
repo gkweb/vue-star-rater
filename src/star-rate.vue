@@ -42,14 +42,7 @@
 <script lang="ts">
 import Icon from "./Icon.vue";
 import { computed, defineComponent, ref, PropType, toRef } from "vue";
-import { PropColours, HandleRateProps } from "@/types/props";
-
-interface Props {
-  modelValue?: number;
-  maxAmount?: number;
-  oneRatingOnly: boolean;
-  colours: PropColours;
-}
+import { PropColours, HandleRateProps, Props } from "@/types/props";
 
 export default defineComponent({
   components: {

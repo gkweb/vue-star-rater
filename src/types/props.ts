@@ -8,3 +8,10 @@ export interface HandleRateProps {
   amount: number;
   currentValue: number;
 }
+
+export interface Props {
+  modelValue?: number;
+  maxAmount?: number;
+  oneRatingOnly: boolean;
+  colours: PropColours;
+}
