@@ -1,5 +1,5 @@
 <template>
-  <h1 class="title">Vue Star Rate</h1>
+  <h1 class="title">Vue Star Rater</h1>
   <star-rate v-model="currentRating" :maxAmount="10">
     <template #rating-text="{modelValue, maxAmount}">
       <strong
@@ -10,7 +10,7 @@
   </star-rate>
 
   <p class="description">
-    Vue star rate is a minimal and highly composable star rating component.
+    Vue star rater is a minimal and highly composable star rating component.
     Built with Vue 3 composition API and Typescript under the hood - It's a
     really small component.
   </p>
@@ -49,7 +49,7 @@
       Installation
     </template>
     <template #example>
-      <CodeExample :modelValue="'npm i -s vue-star-rate'" />
+      <CodeExample :modelValue="'npm i -s vue-star-rater'" />
     </template>
   </ExampleContainer>
 
@@ -59,7 +59,7 @@
     </template>
     <template #example>
       <CodeExample
-        :modelValue="`import { VueStarRate } from 'vue-star-rate';`"
+        :modelValue="`import StarRate from 'vue-star-rater';`"
       />
     </template>
   </ExampleContainer>
