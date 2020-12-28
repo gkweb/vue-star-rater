@@ -1,6 +1,6 @@
 {
-  "name": "vue-star-rate",
-  "version": "0.0.1",
+  "name": "vue-star-rater",
+  "version": "0.0.4",
   "description": "",
   "main": "dist/star-rate.ssr.js",
   "browser": "dist/star-rate.esm.js",
@@ -12,6 +12,10 @@
     "star-rate.d.ts",
     "src/**/*.vue"
   ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/gkweb/vue-star-rater"
+  },
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
