@@ -1,0 +1,19 @@
+{
+  "name": "vue-star-rate-main",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.0.4",
+    "vue-star-rate": "file:../",
+    "vue3-highlightjs": "^1.0.5"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^4.5.9",
+    "@vue/compiler-sfc": "^3.0.4",
+    "@vue/test-utils": "^1.1.2",
+    "vite": "^1.0.0-rc.13"
+  }
+}
