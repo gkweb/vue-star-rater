@@ -1,3 +1,4 @@
+import './matchMedia.mock'
 import { shallowMount } from "@vue/test-utils";
 import StarRate from "./../../src/star-rate.vue";
 

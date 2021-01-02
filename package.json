@@ -13,8 +13,8 @@
     "src/**/*.vue"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/gkweb/vue-star-rater"
+    "type": "git",
+    "url": "https://github.com/gkweb/vue-star-rater"
   },
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",
