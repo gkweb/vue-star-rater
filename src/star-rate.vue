@@ -12,8 +12,8 @@
             'vue-star-rate__item--is-hovering-range': r <= hoverOverAmount,
             'vue-star-rate__item--is-selection-range': r <= modelValue
           }"
-          @mouseover="() => {if (isMobile) return; hoverOverAmount = r}"
-          @mouseleave="() => {if (isMobile) return; hoverOverAmount = -1}"
+          @mouseover="() => { if (!isTouchDevice) { hoverOverAmount = r }}"
+          @mouseleave="() => { if (!isTouchDevice) { hoverOverAmount = -1 }}"
         >
           <slot
             name="icon"
@@ -41,7 +41,7 @@
 
 <script lang="ts">
 import Icon from "./Icon.vue";
-import { computed, defineComponent, ref, PropType, toRef, onMounted, onUnmounted } from "vue";
+import { computed, defineComponent, ref, PropType, toRef } from "vue";
 import { PropColours, HandleRateProps, Props } from "@/types/props";
 
 export default defineComponent({
@@ -77,21 +77,23 @@ export default defineComponent({
     const styleVariables = computed(() => {
       return `--vsr-active-colour:${props.colours.activeColour};--vsr-hover-colour:${props.colours.hoverColour};--vsr-inactive-colour:${props.colours.inactiveColour};`;
     });
-    
-    const isMobile = ref<boolean>(false);
-    // Media query
-    const mm = matchMedia('screen and (max-width: 48em)')
-    const mqHandler = (mq:any) => {
-      isMobile.value = mq.matches
-    }
 
-    onMounted(() => {
-       mm.addListener(mqHandler)
-    })
+    const isTouchDevice = ref<boolean>(false);
+    isTouchDevice.value = 'ontouchstart' in window
+
+  //   // Media query
+  //   const mm = matchMedia('screen and (max-width: 64em)')
+  //   const mqHandler = (mq:any) => {
+  //     isMobile.value = mq.matches && 'ontouchstart' in window
+  //   }
+
+  //   onMounted(() => {
+  //      mm.addListener(mqHandler)
+  //   })
    
-   onUnmounted(() => {
-     mm.removeListener(mqHandler)
-   })
+  //  onUnmounted(() => {
+  //    mm.removeListener(mqHandler)
+  //  })
 
     /**
      * Handles rating and emits specific events
@@ -121,7 +123,7 @@ export default defineComponent({
       hoverOverAmount,
       styleVariables,
       handleRate,
-      isMobile
+      isTouchDevice,
     };
   }
 });
