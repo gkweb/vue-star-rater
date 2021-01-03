@@ -1,4 +1,5 @@
 <template>
+  <div class="wrapper">
   <h1 class="title">Vue Star Rater</h1>
   <star-rate v-model="currentRating" :maxAmount="10">
     <template #rating-text="{modelValue, maxAmount}">
@@ -117,6 +118,7 @@
     More examples coming soon. Made with 💜 + ☕️ in Melbourne, Australia.
     <a href="https://gladekettle.com.au">Glade Kettle</a>
   </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -204,6 +206,7 @@ export default defineComponent({
   margin-bottom: 1rem;
 }
 
-.example-container__description {
+.wrapper {
+  padding: 0 1rem;
 }
 </style>
