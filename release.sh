@@ -10,3 +10,4 @@ cd docs/
 npm i vue-star-rater@latest
 git add package*
 git commit -m "Bump to vue-star-rater@latest"
+git push
