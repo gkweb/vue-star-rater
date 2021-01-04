@@ -81,20 +81,6 @@ export default defineComponent({
     const isTouchDevice = ref<boolean>(false);
     isTouchDevice.value = 'ontouchstart' in window
 
-  //   // Media query
-  //   const mm = matchMedia('screen and (max-width: 64em)')
-  //   const mqHandler = (mq:any) => {
-  //     isMobile.value = mq.matches && 'ontouchstart' in window
-  //   }
-
-  //   onMounted(() => {
-  //      mm.addListener(mqHandler)
-  //   })
-   
-  //  onUnmounted(() => {
-  //    mm.removeListener(mqHandler)
-  //  })
-
     /**
      * Handles rating and emits specific events
      * Events of interest:
