@@ -1,6 +1,6 @@
 {
   "name": "vue-star-rater",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "main": "dist/star-rate.ssr.js",
   "browser": "dist/star-rate.esm.js",
@@ -22,7 +22,7 @@
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-    "pub": "npm run build && npm version patch --force && npm publish",
+    "pub": "./release.sh",
     "test": "jest"
   },
   "dependencies": {
